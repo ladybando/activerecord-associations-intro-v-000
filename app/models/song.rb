@@ -1,9 +1,4 @@
 class Song < ActiveRecord::Base
-  def change
-    create_table :songs do |t|
-      t.string :name 
-      t.integer :artist_id
-      t.integer :genre_id
-    end
-  end
+  belongs_to :artist
+  belongs_to :genre
 end
